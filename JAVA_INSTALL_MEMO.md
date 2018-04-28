@@ -18,7 +18,9 @@ rpm -Uvh jdk-8u162-linux-x64.rpm
 ### 3. alternatives command
 
 ```bash
-[]# alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
+alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
+alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
 []# ls -la /usr/bin/java
 lrwxrwxrwx. 1 root root 22 Apr 28 07:42 /usr/bin/java -> /etc/alternatives/java
 []# ls -al /usr/java/latest/bin/java
@@ -37,3 +39,7 @@ vim /etc/rc.local
 
 export JAVA_HOME="/usr/java/latest"
 ```
+
+### 5. jenkins slave
+
+- no need to install jenkins on jenkins slave server !!
