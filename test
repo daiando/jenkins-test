@@ -8,3 +8,4 @@ git plugin test (not github plugin)3
 check timestamp
 downstream project test
 pass param to downstream test
+pass param to downstream test 2
