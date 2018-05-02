@@ -2,8 +2,8 @@
 
 - botuser send PR
 - jenkins job kicked
--  
-
+- build test by jenkins
+- send email to reviewer
 
 ### 1. github integration service is going to be deprecated.
 
