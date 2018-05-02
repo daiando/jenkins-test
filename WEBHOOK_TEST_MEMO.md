@@ -6,3 +6,8 @@
 ### 2. create CODEOWNERS
 
 - create `.github/CODEOWNERS`
+
+
+### 3. setup jenkins `github pull request builder` plugin
+
+- use bot account
