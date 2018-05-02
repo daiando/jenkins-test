@@ -2,3 +2,5 @@
 
 - use github webhook
 - use jenkins pull request builder
+
+### 2. create CODEOWNERS
