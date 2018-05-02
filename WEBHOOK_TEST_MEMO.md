@@ -4,3 +4,5 @@
 - use jenkins pull request builder
 
 ### 2. create CODEOWNERS
+
+- create `.github/CODEOWNERS`
