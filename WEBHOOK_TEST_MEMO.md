@@ -25,3 +25,8 @@
 ### 4. use slack notification plugin
 
 - testtest
+
+
+### 5. trouble shoot
+
+- `jenkins-url/ghprbhook/` returns 500 error -> restart jenkins
