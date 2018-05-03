@@ -17,5 +17,16 @@
 
 ### 3. setup jenkins `github pull request builder` plugin
 
-- use bot account
-- test test
+- create github bot account
+- set this account as collaborator in your repo
+- jenkins global configuratino
+
+
+### 4. use slack notification plugin
+
+- testtest
+
+
+### 5. trouble shoot
+
+- `jenkins-url/ghprbhook/` returns 500 error -> restart jenkins
