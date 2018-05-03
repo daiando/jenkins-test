@@ -19,7 +19,7 @@
 
 - create github bot account
 - set this account as collaborator in your repo
--
+- jenkins global configuratino
 
 
 ### 4. use slack notification plugin
