@@ -19,7 +19,8 @@
 
 - create github bot account
 - set this account as collaborator in your repo
-- jenkins global configuratino
+- jenkins global configuration
+- add pull requester credential for gitub pull request builder settings
 
 
 ### 4. use slack notification plugin
