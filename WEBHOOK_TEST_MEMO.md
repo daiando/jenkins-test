@@ -24,4 +24,4 @@
 
 ### 4. use slack notification plugin
 
-- test
+- testtest
