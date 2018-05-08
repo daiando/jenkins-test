@@ -1,10 +1,7 @@
 ### 1. master
 
-```
-ssh_keygen
-
-```
-
+- `ssh-keygen` outside of container due to security reason
+- use this ssh keys
 
 ### 2. slave
 
