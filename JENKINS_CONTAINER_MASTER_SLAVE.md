@@ -1,3 +1,11 @@
+### 0. How to use slave container for jenkins master container
+
+- requirements: mater is container, and slave is container as well
+- there are several ways
+- can use jenkinsci/ssh-slave so that you could save times for complicated ssh setups
+- it's possible to connect this slave container to master, but it's resource wasting because slave is running if no need to run jekins jobs.
+- it's seemingly better to use docker plugin which enable us to run slave container every time it comes to need to use it.
+
 ### 1. run master jenkins
 
 ```
@@ -40,8 +48,5 @@ bin  etc   jnksmaster  media  proc  run   srv  tmp  var
 dev  home  lib	       mnt    root  sbin  sys  usr
 [root@hoooober2 user]# docker cp jenkinsssh/jnksmaster.pub master:/tmp/
 [root@hoooober2 user]# docker cp jenkinsssh/jnksmaster master:/tmp/
-
-
-
 
 ```
