@@ -1,16 +1,8 @@
-FROM openjdk:8-jdk
+FROM jenkinsci/ssh-slave
 
-ARG user=jenkins
-ARG group=jenkins
-ARG uid=1000
-ARG gid=1000
-
-ENV JENKINS_HOME /var/jenkins_home
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN groupadd -g ${gid} ${group} \
-    && useradd -d "$JENKINS_HOME" -u ${uid} -g ${gid} -m -s /bin/bash ${user} \
-    && apt-get update \
+RUN apt-get update \
     && apt-get install -y git curl \
       lsb-release \
       apt-transport-https \
@@ -26,7 +18,4 @@ RUN groupadd -g ${gid} ${group} \
     && apt-get update \
     && apt-get install -y docker-ce \
     && rm -rf /var/lib/apt/lists/* \
-    && mkdir /var/jenkins_home/.ssh \
     && usermod -aG docker jenkins
-
-EXPOSE 22

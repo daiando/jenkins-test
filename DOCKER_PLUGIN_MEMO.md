@@ -36,4 +36,4 @@ Pull strategy -> pull once and update latest
 ### 3. questions
 
 - how slave could connect to master if master and slave is going to run on a swarm cluster.
-- 
+- how to install docker into slave
