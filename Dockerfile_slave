@@ -4,12 +4,13 @@ ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
 ARG gid=1000
+ARG JENKINS_AGENT_HOME=/home/${user}
 
-ENV JENKINS_HOME /var/jenkins_home
+ENV JENKINS_AGENT_HOME ${JENKINS_AGENT_HOME}
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN groupadd -g ${gid} ${group} \
-    && useradd -d "$JENKINS_HOME" -u ${uid} -g ${gid} -m -s /bin/bash ${user} \
+    && useradd -d "${JENKINS_AGENT_HOME}" -u "${uid}" -g "${gid}" -m -s /bin/bash "${user}" \
     && apt-get update \
     && apt-get install -y git curl \
       lsb-release \
@@ -18,6 +19,9 @@ RUN groupadd -g ${gid} ${group} \
       curl \
       gnupg2 \
       software-properties-common \
+# setup SSH server
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y openssh-server \
     && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - \
     && add-apt-repository \
        "deb [arch=amd64] https://download.docker.com/linux/debian \
@@ -25,8 +29,21 @@ RUN groupadd -g ${gid} ${group} \
        stable" \
     && apt-get update \
     && apt-get install -y docker-ce \
-    && rm -rf /var/lib/apt/lists/* \
-    && mkdir /var/jenkins_home/.ssh \
-    && usermod -aG docker jenkins
+    && usermod -aG docker jenkins \
+    && rm -rf /var/lib/apt/lists/*
+RUN sed -i /etc/ssh/sshd_config \
+        -e 's/#PermitRootLogin.*/PermitRootLogin no/' \
+        -e 's/#RSAAuthentication.*/RSAAuthentication yes/'  \
+        -e 's/#PasswordAuthentication.*/PasswordAuthentication no/' \
+        -e 's/#SyslogFacility.*/SyslogFacility AUTH/' \
+        -e 's/#LogLevel.*/LogLevel INFO/' && \
+    mkdir /var/run/sshd
+
+VOLUME "${JENKINS_AGENT_HOME}" "/tmp" "/run" "/var/run"
+WORKDIR "${JENKINS_AGENT_HOME}"
+
+COPY setup-sshd /usr/local/bin/setup-sshd
 
 EXPOSE 22
+
+ENTRYPOINT ["setup-sshd"]
