@@ -1,4 +1,4 @@
-FROM jenkinsci/ssh-slave
+FROM openjdk:8-jdk
 
 ARG user=jenkins
 ARG group=jenkins
@@ -19,8 +19,6 @@ RUN groupadd -g ${gid} ${group} \
       curl \
       gnupg2 \
       software-properties-common \
-# setup SSH server
-RUN apt-get update \
     && apt-get install --no-install-recommends -y openssh-server \
     && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - \
     && add-apt-repository \
