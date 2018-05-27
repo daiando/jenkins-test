@@ -2,7 +2,7 @@
 [![build record](https://img.shields.io/badge/latest%20build-2018%2F4%2F29-pink.svg)]() -->
 
 <!-- [![Build Status](http://54.254.136.246:8080/buildStatus/icon?job=gittest)](http://54.254.136.246:8080/job/gittest/) -->
-[![Build Status](http://13.250.56.95:8080/buildStatus/icon?job=ghprbhook)](http://13.250.56.95:8080/job/ghprbhook/)
+[![Build Status](http://52.77.244.142:8080/buildStatus/icon?job=ghprbhook)](http://52.77.244.142:8080/job/ghprbhook/)
 
 # jenkins-test
 jenkins practices
