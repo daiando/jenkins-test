@@ -1,6 +1,10 @@
 <!-- [![Jenkins Test](https://img.shields.io/badge/test-passing-brightgreen.svg)](http://hoooober1.mylabserver.com:8080/blue/organizations/jenkins/gittest/activity)
 [![build record](https://img.shields.io/badge/latest%20build-2018%2F4%2F29-pink.svg)]() -->
+<<<<<<< HEAD
 [![Build Status](http://54.169.243.50:8080/buildStatus/icon?job=ghprbhook)](http://54.169.243.50:8080/job/ghprbhook/)
+=======
+[![Build Status](http://13.250.23.208:8080/buildStatus/icon?job=ghprbhook)](http://13.250.23.208:8080/job/ghprbhook/)
+>>>>>>> 2210e78b205476870f846de1a5dec3c3c3ae716a
 
 # jenkins-test
 jenkins practices
