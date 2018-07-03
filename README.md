@@ -1,7 +1,7 @@
 <!-- [![Jenkins Test](https://img.shields.io/badge/test-passing-brightgreen.svg)](http://hoooober1.mylabserver.com:8080/blue/organizations/jenkins/gittest/activity)
 [![build record](https://img.shields.io/badge/latest%20build-2018%2F4%2F29-pink.svg)]() -->
 
-[![Build Status](http://13.229.49.91:8080/buildStatus/icon?job=ghprbhook)](http://13.229.49.91:8080/job/ghprbhook/)
+[![Build Status](http://13.229.62.65:8080/buildStatus/icon?job=ghprbhook)](http://13.229.62.65:8080/job/ghprbhook/)
 
 
 # jenkins-test
