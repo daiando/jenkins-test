@@ -3,7 +3,6 @@
 
 [![Build Status](http://52.77.248.148:8080/buildStatus/icon?job=ghprbhook)](http://52.77.248.148:8080/job/ghprbhook/)
 
-
 # jenkins-test
 jenkins practices
 
