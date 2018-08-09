@@ -36,4 +36,15 @@ Pull strategy -> pull once and update latest
 ### 3. questions
 
 - how slave could connect to master if master and slave is going to run on a swarm cluster.
+
+```
+Ideally, slave should run only when it's called from jenkins master. For that, slave image should share the pub key with master.
+We can do it by registering the slave image on jenkins GUI.
+```
+
 - how to install docker into slave
+
+```
+So we can use the public jenkins slave image.
+All we have to do is just add docker install proccess in the dokcer file.
+```
