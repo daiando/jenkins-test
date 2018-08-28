@@ -24,7 +24,6 @@ docker cp ${1}/${2} ${3}:/tmp/
 ## TODO
 
 - use `Jenkinsfile`
-
 ```
 $(history | grep blue | grep -v grep | tail -n 1 | cut -d ' ' -f5-)
 $(history | grep entry | grep -v grep | tail -n 1 | cut -d ' ' -f5-)
