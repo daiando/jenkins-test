@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    ENVTEST = 'hello!'
+  }
   stages {
     stage('stage01') {
       steps {
@@ -8,11 +11,8 @@ pipeline {
     }
     stage('stage02') {
       steps {
-        sh 'echo $env.ENVTEST'
+        sh "echo $env.ENVTEST"
       }
     }
-  }
-  environment {
-    ENVTEST = 'hello!'
   }
 }
